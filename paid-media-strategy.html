@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Strategic Proposal — AFIS™ | Prepared by Charles Piper</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy-deep: #0f2444;
+    --navy: #1e3a5f;
+    --navy-soft: #2d4a73;
+    --amber: #f4a52a;
+    --amber-soft: #fbcb6f;
+    --cream: #faf7f2;
+    --cream-warm: #f3ede1;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --ink-faint: #7a7a7a;
+    --rule: #d8d2c4;
+    --rule-soft: #e8e3d6;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', 'Courier New', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  ::selection { background: var(--amber); color: var(--navy-deep); }
+
+  section {
+    min-height: 100vh;
+    padding: 96px 8vw;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) {
+    section { padding: 72px 28px; }
+  }
+
+  .container { max-width: 1240px; margin: 0 auto; width: 100%; position: relative; z-index: 2; }
+
+  .label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 28px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .label::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: currentColor;
+  }
+
+  .label-navy { color: var(--navy); }
+  .label-centered { justify-content: center; }
+
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; letter-spacing: -0.015em; }
+
+  .accent-italic { color: var(--amber); font-style: italic; font-weight: 500; }
+
+  /* HERO */
+  .hero {
+    background: var(--navy-deep);
+    color: var(--cream);
+    overflow: hidden;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 90% 60% at 15% 25%, rgba(244, 165, 42, 0.16), transparent 60%),
+      radial-gradient(ellipse 70% 50% at 85% 75%, rgba(244, 165, 42, 0.08), transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(250, 247, 242, 0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(250, 247, 242, 0.025) 1px, transparent 1px);
+    background-size: 72px 72px;
+    background-position: center;
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black, transparent);
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 50%, black, transparent);
+  }
+
+  .hero-frame {
+    position: relative;
+    z-index: 2;
+    max-width: 1240px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    min-height: calc(100vh - 128px);
+  }
+
+  .hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(250, 247, 242, 0.55);
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(250, 247, 242, 0.12);
+  }
+
+  .hero-mark {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .hero-mark .crest {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--amber);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--amber);
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .hero-center { padding: 32px 0; }
+
+  .hero-eyebrow {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    width: 36px;
+    height: 1px;
+    background: var(--amber);
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 8.5vw, 112px);
+    line-height: 0.97;
+    margin-bottom: 36px;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    max-width: 14ch;
+  }
+
+  .hero h1 .accent {
+    color: var(--amber);
+    font-style: italic;
+    font-weight: 500;
+  }
+
+  .hero-sub {
+    font-family: var(--serif);
+    font-size: clamp(20px, 2.3vw, 30px);
+    font-weight: 400;
+    color: rgba(250, 247, 242, 0.85);
+    max-width: 700px;
+    line-height: 1.4;
+  }
+
+  .hero-sub em { font-style: italic; color: var(--amber-soft); }
+
+  .hero-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 40px;
+    align-items: end;
+    padding-top: 32px;
+    border-top: 1px solid rgba(250, 247, 242, 0.12);
+  }
+
+  @media (max-width: 768px) {
+    .hero-bottom { grid-template-columns: 1fr 1fr; gap: 24px; }
+  }
+
+  .hero-meta-item .k {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(250, 247, 242, 0.5);
+    margin-bottom: 8px;
+  }
+  .hero-meta-item .v {
+    font-family: var(--serif);
+    font-size: 19px;
+    color: var(--cream);
+    line-height: 1.3;
+  }
+
+  .hero-signature {
+    text-align: right;
+    font-family: var(--serif);
+    font-size: 16px;
+    color: rgba(250, 247, 242, 0.7);
+    line-height: 1.4;
+  }
+
+  .hero-signature strong {
+    display: block;
+    color: var(--cream);
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  /* UNDERSTANDING */
+  .context { background: var(--cream); }
+
+  .context-head {
+    max-width: 920px;
+    margin: 0 auto 80px;
+    text-align: center;
+  }
+
+  .context-head h2 {
+    font-size: clamp(40px, 5.5vw, 64px);
+    line-height: 1.02;
+    color: var(--navy-deep);
+    margin-bottom: 24px;
+  }
+
+  .context-head p {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-style: italic;
+    color: var(--navy);
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.45;
+  }
+
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+
+  @media (max-width: 768px) { .pillars { grid-template-columns: 1fr; } }
+
+  .pillar {
+    background: var(--cream);
+    padding: 40px 36px;
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .pillar .glyph {
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--amber);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--amber);
+    font-size: 19px;
+    font-weight: 600;
+  }
+
+  .pillar h4 {
+    font-size: 24px;
+    color: var(--navy-deep);
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .pillar p {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  /* PRACTITIONER */
+  .creds {
+    background: var(--navy-deep);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .creds::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(244, 165, 42, 0.08), transparent 70%);
+    pointer-events: none;
+  }
+
+  .creds-head {
+    max-width: 900px;
+    margin-bottom: 64px;
+  }
+
+  .creds h2 {
+    font-size: clamp(40px, 5.5vw, 64px);
+    line-height: 1.04;
+    margin-bottom: 24px;
+  }
+
+  .creds h2 .accent { color: var(--amber); font-style: italic; }
+
+  .creds-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  @media (max-width: 900px) { .creds-grid { grid-template-columns: 1fr; gap: 56px; } }
+
+  .creds-left h3 {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 32px;
+    font-weight: 500;
+  }
+
+  .creds-statement {
+    font-family: var(--serif);
+    font-size: clamp(22px, 2.5vw, 30px);
+    line-height: 1.4;
+    color: var(--cream);
+    margin-bottom: 32px;
+    font-weight: 400;
+  }
+
+  .creds-statement em { color: var(--amber); font-style: italic; }
+
+  .creds-detail {
+    font-size: 15px;
+    color: rgba(250, 247, 242, 0.75);
+    line-height: 1.7;
+    max-width: 56ch;
+    margin-bottom: 20px;
+  }
+
+  .creds-right {
+    display: grid;
+    gap: 28px;
+  }
+
+  .cred-card {
+    padding: 28px 28px;
+    border: 1px solid rgba(250, 247, 242, 0.12);
+    background: rgba(250, 247, 242, 0.02);
+  }
+
+  .cred-card .figure {
+    font-family: var(--serif);
+    font-size: clamp(32px, 4vw, 48px);
+    color: var(--amber);
+    line-height: 1;
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+
+  .cred-card .figure sup { font-size: 0.45em; vertical-align: super; margin-left: 2px; }
+
+  .cred-card .ctx {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(250, 247, 242, 0.5);
+    margin-bottom: 14px;
+  }
+
+  .cred-card .desc {
+    font-size: 14px;
+    color: rgba(250, 247, 242, 0.85);
+    line-height: 1.55;
+  }
+
+  .cred-certs {
+    margin-top: 56px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(250, 247, 242, 0.12);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+
+  @media (max-width: 768px) {
+    .cred-certs { grid-template-columns: 1fr; gap: 16px; }
+  }
+
+  .cred-certs .head {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--amber);
+    white-space: nowrap;
+  }
+
+  .cred-certs .list {
+    font-size: 14px;
+    color: rgba(250, 247, 242, 0.8);
+    line-height: 1.7;
+  }
+
+  /* STRATEGY */
+  .strategy { background: var(--cream-warm); }
+
+  .strategy-head {
+    max-width: 920px;
+    margin: 0 auto 64px;
+    text-align: center;
+  }
+
+  .strategy-head h2 {
+    font-size: clamp(40px, 5.5vw, 64px);
+    color: var(--navy-deep);
+    line-height: 1.04;
+    margin-bottom: 24px;
+  }
+
+  .strategy-head h2 .accent { color: var(--amber); font-style: italic; }
+
+  .strategy-head p {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-style: italic;
+    color: var(--navy);
+    max-width: 660px;
+    margin: 0 auto;
+    line-height: 1.45;
+  }
+
+  .strat-divider {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--navy);
+    text-align: center;
+    margin: 0 0 32px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .strat-divider::before, .strat-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  .strat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: 900px) { .strat-grid { grid-template-columns: 1fr; } }
+
+  .strat-card {
+    background: var(--cream);
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 320px;
+  }
+
+  .strat-card .head-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--rule-soft);
+    gap: 12px;
+  }
+
+  .strat-card .tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--amber);
+  }
+
+  .strat-card .priority {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    text-align: right;
+  }
+
+  .strat-card h4 {
+    font-size: 26px;
+    color: var(--navy-deep);
+    line-height: 1.18;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+
+  .strat-card p {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+
+  .strat-card .levers {
+    list-style: none;
+    border-top: 1px solid var(--rule-soft);
+    padding-top: 14px;
+    display: grid;
+    gap: 6px;
+  }
+
+  .strat-card .levers li {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--navy);
+    letter-spacing: 0.02em;
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .strat-card .levers li::before {
+    content: '↳';
+    position: absolute;
+    left: 0;
+    color: var(--amber);
+  }
+
+  .ops-strip {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+  }
+
+  @media (max-width: 768px) { .ops-strip { grid-template-columns: 1fr; } }
+
+  .ops-card {
+    background: var(--navy-deep);
+    color: var(--cream);
+    padding: 32px 32px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .ops-card .ops-glyph {
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--amber);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-style: italic;
+    color: var(--amber);
+    font-size: 19px;
+    font-weight: 600;
+  }
+
+  .ops-card .tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 6px;
+  }
+
+  .ops-card h4 {
+    font-size: 19px;
+    color: var(--cream);
+    margin-bottom: 6px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .ops-card p {
+    font-size: 13.5px;
+    color: rgba(250, 247, 242, 0.75);
+    line-height: 1.55;
+  }
+
+  /* FUNNEL */
+  .funnel { background: var(--cream); }
+
+  .funnel h2 {
+    font-size: clamp(40px, 5.5vw, 64px);
+    color: var(--navy-deep);
+    line-height: 1.04;
+    margin-bottom: 56px;
+    max-width: 16ch;
+  }
+
+  .funnel-flow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    position: relative;
+    margin-bottom: 64px;
+  }
+
+  @media (max-width: 900px) { .funnel-flow { grid-template-columns: 1fr; } }
+
+  .funnel-stage {
+    padding: 32px 28px 32px 32px;
+    border: 1px solid var(--rule);
+    background: var(--cream);
+    position: relative;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+
+  .funnel-stage::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--amber);
+    opacity: 0.3;
+    transition: opacity 0.3s;
+  }
+
+  .funnel-stage:hover::before { opacity: 1; }
+
+  .funnel-stage .stage-num {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 10px;
+  }
+
+  .funnel-stage h4 {
+    font-size: 22px;
+    color: var(--navy-deep);
+    margin-bottom: 12px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  .funnel-stage p {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+
+  .funnel-stage .signal {
+    font-family: var(--mono);
+    font-size: 10.5px;
+    color: var(--navy);
+    letter-spacing: 0.04em;
+    padding-top: 12px;
+    border-top: 1px solid var(--rule-soft);
+    line-height: 1.5;
+  }
+
+  .funnel-notes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    padding-top: 40px;
+    border-top: 1px solid var(--rule);
+  }
+
+  @media (max-width: 768px) { .funnel-notes { grid-template-columns: 1fr; gap: 32px; } }
+
+  .funnel-note h5 {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 12px;
+  }
+
+  .funnel-note p {
+    font-size: 14px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  /* COMPLIANCE */
+  .compliance {
+    background: var(--navy);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .compliance::before {
+    content: '';
+    position: absolute;
+    bottom: -300px;
+    left: -200px;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(244, 165, 42, 0.06), transparent 70%);
+    pointer-events: none;
+  }
+
+  .compliance h2 {
+    font-size: clamp(40px, 5.5vw, 64px);
+    line-height: 1.04;
+    margin-bottom: 24px;
+  }
+
+  .compliance h2 .accent { color: var(--amber); font-style: italic; }
+
+  .compliance .lead {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-style: italic;
+    max-width: 700px;
+    color: rgba(250, 247, 242, 0.8);
+    margin-bottom: 64px;
+    line-height: 1.45;
+  }
+
+  .comp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: rgba(250, 247, 242, 0.12);
+    border: 1px solid rgba(250, 247, 242, 0.12);
+  }
+
+  @media (max-width: 768px) { .comp-grid { grid-template-columns: 1fr; } }
+
+  .comp-block {
+    padding: 36px 36px;
+    background: var(--navy);
+  }
+
+  .comp-block .tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 16px;
+  }
+
+  .comp-block h4 {
+    font-size: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .comp-block p {
+    font-size: 14.5px;
+    color: rgba(250, 247, 242, 0.78);
+    line-height: 1.65;
+    margin-bottom: 14px;
+  }
+
+  .comp-block p:last-child { margin-bottom: 0; }
+
+  /* ROADMAP */
+  .roadmap { background: var(--cream); }
+
+  .roadmap h2 {
+    font-size: clamp(40px, 5.5vw, 64px);
+    color: var(--navy-deep);
+    line-height: 1.04;
+    margin-bottom: 56px;
+    max-width: 16ch;
+  }
+
+  .timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    position: relative;
+  }
+
+  @media (max-width: 900px) { .timeline { grid-template-columns: 1fr; } }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 28px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--rule);
+  }
+
+  @media (max-width: 900px) { .timeline::before { display: none; } }
+
+  .phase {
+    padding-right: 24px;
+    position: relative;
+    padding-top: 56px;
+  }
+
+  .phase::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--amber);
+    border: 3px solid var(--cream);
+    box-shadow: 0 0 0 1px var(--amber);
+  }
+
+  .phase .phase-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 10px;
+  }
+
+  .phase h4 {
+    font-size: 22px;
+    color: var(--navy-deep);
+    margin-bottom: 14px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
+
+  .phase ul {
+    list-style: none;
+    display: grid;
+    gap: 8px;
+  }
+
+  .phase ul li {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.55;
+  }
+
+  .phase ul li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--amber);
+  }
+
+  /* KPIs */
+  .kpis { background: var(--cream-warm); }
+
+  .kpis h2 {
+    font-size: clamp(40px, 5.5vw, 64px);
+    color: var(--navy-deep);
+    line-height: 1.04;
+    margin-bottom: 24px;
+    max-width: 16ch;
+  }
+
+  .kpis .intro {
+    font-family: var(--serif);
+    font-size: 21px;
+    font-style: italic;
+    color: var(--navy);
+    max-width: 720px;
+    margin-bottom: 56px;
+    line-height: 1.45;
+  }
+
+  .kpi-table {
+    width: 100%;
+    border-top: 2px solid var(--navy-deep);
+    border-bottom: 2px solid var(--navy-deep);
+  }
+
+  .kpi-row {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1.6fr;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: baseline;
+  }
+
+  .kpi-row:last-child { border-bottom: none; }
+
+  .kpi-row.head {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--navy);
+    padding: 16px 0;
+    border-bottom: 1px solid var(--navy-deep);
+  }
+
+  .kpi-metric {
+    font-family: var(--serif);
+    font-size: 20px;
+    color: var(--navy-deep);
+    font-weight: 600;
+    padding-right: 20px;
+  }
+
+  .kpi-baseline, .kpi-target {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+
+  .kpi-target { color: var(--navy); font-weight: 500; }
+
+  .kpi-note {
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    padding-right: 16px;
+    line-height: 1.55;
+  }
+
+  @media (max-width: 768px) {
+    .kpi-row { grid-template-columns: 1fr 1fr; gap: 8px 16px; padding: 18px 0; }
+    .kpi-row.head { display: none; }
+    .kpi-note { grid-column: 1 / -1; padding-top: 4px; font-size: 12.5px; }
+  }
+
+  /* INVESTMENT */
+  .investment {
+    background: var(--navy-deep);
+    color: var(--cream);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .investment::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(244, 165, 42, 0.1), transparent 70%);
+    pointer-events: none;
+  }
+
+  .investment h2 {
+    font-size: clamp(40px, 5.5vw, 64px);
+    line-height: 1.04;
+    margin-bottom: 24px;
+  }
+
+  .investment h2 .accent { color: var(--amber); font-style: italic; }
+
+  .investment .lead {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-style: italic;
+    color: rgba(250, 247, 242, 0.8);
+    max-width: 720px;
+    margin-bottom: 64px;
+    line-height: 1.45;
+  }
+
+  .inv-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 64px;
+    align-items: start;
+  }
+
+  @media (max-width: 900px) { .inv-grid { grid-template-columns: 1fr; gap: 48px; } }
+
+  .inv-includes h4 {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 24px;
+  }
+
+  .inv-includes ul {
+    list-style: none;
+    display: grid;
+    gap: 14px;
+  }
+
+  .inv-includes li {
+    font-size: 15px;
+    color: rgba(250, 247, 242, 0.88);
+    padding-left: 22px;
+    position: relative;
+    line-height: 1.55;
+  }
+
+  .inv-includes li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--amber);
+    font-family: var(--mono);
+  }
+
+  .inv-box {
+    border: 1px solid rgba(244, 165, 42, 0.4);
+    padding: 40px 36px;
+    background: rgba(244, 165, 42, 0.04);
+    position: relative;
+  }
+
+  .inv-box::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 32px;
+    height: 32px;
+    border-top: 2px solid var(--amber);
+    border-left: 2px solid var(--amber);
+  }
+
+  .inv-box::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 32px;
+    height: 32px;
+    border-bottom: 2px solid var(--amber);
+    border-right: 2px solid var(--amber);
+  }
+
+  .inv-box .ib-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 12px;
+  }
+
+  .inv-box .ib-tier {
+    font-family: var(--serif);
+    font-size: 24px;
+    color: var(--cream);
+    margin-bottom: 6px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .inv-box .ib-detail {
+    font-size: 13.5px;
+    color: rgba(250, 247, 242, 0.72);
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+
+  .inv-box .ib-rule { height: 1px; background: rgba(250, 247, 242, 0.15); margin: 28px 0; }
+
+  .inv-box .ib-foot {
+    font-family: var(--mono);
+    font-size: 11px;
+    color: rgba(250, 247, 242, 0.6);
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+  }
+
+  /* CLOSE */
+  .close {
+    background: var(--cream);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .close::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 30%, rgba(244, 165, 42, 0.04) 100%);
+    pointer-events: none;
+  }
+
+  .close .label { color: var(--amber); }
+
+  .close h2 {
+    font-size: clamp(52px, 7.5vw, 96px);
+    color: var(--navy-deep);
+    line-height: 1.0;
+    margin-bottom: 36px;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    max-width: 14ch;
+  }
+
+  .close h2 .accent { color: var(--amber); font-style: italic; }
+
+  .close .pitch {
+    font-family: var(--serif);
+    font-size: clamp(20px, 2.2vw, 26px);
+    color: var(--navy);
+    max-width: 760px;
+    line-height: 1.5;
+    margin-bottom: 64px;
+  }
+
+  .close .pitch em { font-style: italic; color: var(--navy-deep); }
+
+  .signoff {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    padding-top: 40px;
+    border-top: 1px solid var(--rule);
+    align-items: start;
+  }
+
+  @media (max-width: 768px) { .signoff { grid-template-columns: 1fr; gap: 24px; } }
+
+  .signoff-block h5 {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+
+  .signoff-block p {
+    font-family: var(--serif);
+    font-size: 18px;
+    color: var(--navy-deep);
+    line-height: 1.45;
+  }
+
+  .signoff-block p.sml {
+    font-family: var(--sans);
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+
+  .signoff-block p.contact {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--ink-soft);
+    margin-top: 4px;
+    line-height: 1.6;
+  }
+
+  /* Progress & Nav */
+  .progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: var(--amber);
+    z-index: 100;
+    width: 0%;
+    transition: width 0.1s;
+  }
+
+  .nav-dots {
+    position: fixed;
+    right: 32px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 50;
+  }
+
+  @media (max-width: 1100px) { .nav-dots { display: none; } }
+
+  .nav-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(30, 58, 95, 0.25);
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+    padding: 0;
+    position: relative;
+  }
+
+  .nav-dot.active { background: var(--amber); transform: scale(1.6); }
+  .nav-dot:hover { background: var(--navy); }
+
+  .nav-dot::after {
+    content: attr(data-name);
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: var(--cream);
+    padding: 4px 8px;
+    border: 1px solid var(--rule);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+  }
+
+  .nav-dot:hover::after { opacity: 1; }
+
+  /* Animation */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  [data-reveal] { opacity: 0; }
+  [data-reveal].in-view { animation: fadeUp 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  [data-reveal][data-delay="1"].in-view { animation-delay: 0.12s; }
+  [data-reveal][data-delay="2"].in-view { animation-delay: 0.24s; }
+  [data-reveal][data-delay="3"].in-view { animation-delay: 0.36s; }
+  [data-reveal][data-delay="4"].in-view { animation-delay: 0.48s; }
+  [data-reveal][data-delay="5"].in-view { animation-delay: 0.6s; }
+
+  /* Print */
+  @media print {
+    .nav-dots, .progress { display: none; }
+    section { min-height: auto; padding: 48px 32px; page-break-inside: avoid; page-break-after: always; }
+    .hero, .creds, .compliance, .investment {
+      background: var(--navy-deep) !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    [data-reveal] { opacity: 1 !important; animation: none !important; }
+  }
+
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<nav class="nav-dots" id="navDots">
+  <button class="nav-dot" data-target="hero" data-name="Cover" aria-label="Cover"></button>
+  <button class="nav-dot" data-target="context" data-name="Understanding" aria-label="Understanding"></button>
+  <button class="nav-dot" data-target="creds" data-name="Practitioner" aria-label="Practitioner"></button>
+  <button class="nav-dot" data-target="strategy" data-name="Strategy" aria-label="Strategy"></button>
+  <button class="nav-dot" data-target="funnel" data-name="Journey" aria-label="Journey"></button>
+  <button class="nav-dot" data-target="compliance" data-name="Compliance" aria-label="Compliance"></button>
+  <button class="nav-dot" data-target="roadmap" data-name="Roadmap" aria-label="Roadmap"></button>
+  <button class="nav-dot" data-target="kpis" data-name="Measure" aria-label="Measure"></button>
+  <button class="nav-dot" data-target="investment" data-name="Investment" aria-label="Investment"></button>
+  <button class="nav-dot" data-target="close" data-name="Close" aria-label="Close"></button>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-frame">
+
+    <div class="hero-top">
+      <div class="hero-mark">
+        <div class="crest">CP</div>
+        <span>Heath Media · Strategic Proposal</span>
+      </div>
+      <span>Confidential · For AFIS™ C.I.C.</span>
+    </div>
+
+    <div class="hero-center">
+      <div class="hero-eyebrow">A Twelve-Month Engagement</div>
+      <h1 data-reveal data-delay="1">Amplifying the collective voice of <span class="accent">independent schooling families.</span></h1>
+      <p class="hero-sub" data-reveal data-delay="2">
+        A paid media and social engagement programme designed for AFIS — grounded in the brand,
+        built around the cause, and measured by <em>members gained, voices heard, and pounds returned to the mission.</em>
+      </p>
+    </div>
+
+    <div class="hero-bottom">
+      <div class="hero-meta-item">
+        <div class="k">Engagement</div>
+        <div class="v">12-Month Programme</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="k">Discipline</div>
+        <div class="v">Paid Media &amp; Social</div>
+      </div>
+      <div class="hero-meta-item">
+        <div class="k">Date</div>
+        <div class="v">May 2026</div>
+      </div>
+      <div class="hero-signature">
+        <strong>Charles Piper</strong>
+        Senior Performance Marketing
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- UNDERSTANDING -->
+<section class="context" id="context">
+  <div class="container">
+
+    <div class="context-head" data-reveal>
+      <div class="label label-navy label-centered">01 · Understanding AFIS</div>
+      <h2>Before tactics, the question is what AFIS actually <span class="accent-italic">needs.</span></h2>
+      <p>Not what an agency would sell. Four levers stand out, and the strategy that follows is built around them.</p>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar" data-reveal>
+        <div class="glyph">A</div>
+        <div>
+          <h4>Grow the Membership</h4>
+          <p>Free join means the conversion bar is low. The job is finding the right families and inviting them into the community, every member feeds research, advocacy reach, and Shopping Centre revenue downstream.</p>
+        </div>
+      </div>
+      <div class="pillar" data-reveal data-delay="1">
+        <div class="glyph">B</div>
+        <div>
+          <h4>Amplify the Petition</h4>
+          <p>A public-facing rallying point for fairer treatment. Paid social can extend reach to sympathetic audiences while staying fully within the apolitical positioning that defines AFIS.</p>
+        </div>
+      </div>
+      <div class="pillar" data-reveal data-delay="2">
+        <div class="glyph">C</div>
+        <div>
+          <h4>Fund the Mission via the Shopping Centre</h4>
+          <p>Every member purchase contributes to the Schooling Costs and Bursary Funds. Retargeting and reactivation campaigns are the most efficient revenue lever, and should run continuously alongside seasonal pushes.</p>
+        </div>
+      </div>
+      <div class="pillar" data-reveal data-delay="3">
+        <div class="glyph">D</div>
+        <div>
+          <h4>Recruit Partner Schools</h4>
+          <p>Heads, bursars and marketing leads are a different audience with different signals. A B2B-style Meta and LinkedIn track sits alongside the family-facing work, tuned for considered decision-makers.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PRACTITIONER -->
+<section class="creds" id="creds">
+  <div class="container">
+
+    <div class="creds-head">
+      <div class="label">02 · The Practitioner</div>
+      <h2>A senior pair of hands with the <span class="accent">scars, the certifications, and the temperament</span> to do this well.</h2>
+    </div>
+
+    <div class="creds-grid">
+
+      <div class="creds-left">
+        <h3>Why I'm the right fit for AFIS specifically</h3>
+        <p class="creds-statement">
+          Most performance marketers are trained on ecommerce. They see "members" and reach for the ROAS playbook. AFIS needs someone who understands that a <em>free membership, an advocacy petition, and a not-for-profit Shopping Centre</em> are three different jobs requiring three different mindsets.
+        </p>
+        <p class="creds-detail">
+          Nearly twenty years across Meta, Google, Amazon, TikTok and LinkedIn. UK-focused throughout. Experience spans regulated lead generation, cause-led campaigns, government-endorsed schemes, B2B partner recruitment, and ecommerce. The breadth is what matters here, AFIS does not fit one mould, and a single-discipline specialist would miss things.
+        </p>
+        <p class="creds-detail">
+          The temperament matters too. AFIS is a brand built on restraint and credibility. I do not chase trends, do not over-promise, and do not write copy that would embarrass the founder. Every creative goes through tone review before it goes live.
+        </p>
+      </div>
+
+      <div class="creds-right">
+        <div class="cred-card" data-reveal>
+          <div class="figure">$13M<sup>+</sup></div>
+          <div class="ctx">Ad Spend Managed · Career</div>
+          <div class="desc">Across Meta, Google, Amazon, TikTok and LinkedIn for UK and international clients.</div>
+        </div>
+        <div class="cred-card" data-reveal data-delay="1">
+          <div class="figure">20<sup>yrs</sup></div>
+          <div class="ctx">Practitioner Experience</div>
+          <div class="desc">From in-house performance lead to agency director to independent contractor. Same person, more scars.</div>
+        </div>
+        <div class="cred-card" data-reveal data-delay="2">
+          <div class="figure">Top<sup>★</sup></div>
+          <div class="ctx">Rated · 100% Job Success</div>
+          <div class="desc">Verified Top Rated on Upwork with a 100% job success score across diverse client engagements.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cred-certs">
+      <div class="head">Certifications &amp; Stack</div>
+      <div class="list">
+        Meta Certified Media Buying Professional · Google Ads (Search, Shopping, Display, Measurement) · Google Tag Manager · GA4 · Looker Studio · Conversion API · Python automations · Server-side tagging
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STRATEGY -->
+<section class="strategy" id="strategy">
+  <div class="container">
+
+    <div class="strategy-head" data-reveal>
+      <div class="label label-navy label-centered">03 · The Strategy</div>
+      <h2>Four programmes, running in parallel.<br/><span class="accent">One operating system</span> underneath.</h2>
+      <p>Each programme has its own audience, brief, and measurement frame. They share a learning loop so insight from one feeds the others.</p>
+    </div>
+
+    <div class="strat-divider">The four growth programmes</div>
+
+    <div class="strat-grid">
+      <div class="strat-card" data-reveal>
+        <div class="head-row">
+          <span class="tag">Programme A</span>
+          <span class="priority">Always-on · Highest budget share</span>
+        </div>
+        <h4>Member Acquisition Engine</h4>
+        <p>Always-on Meta prospecting to UK parents and alumni audiences. A soft-conversion entry point that respects the free-to-join model. Creative built around real member stories, not generic education imagery.</p>
+        <ul class="levers">
+          <li>Advantage+ Audience with broad UK targeting</li>
+          <li>Lookalikes seeded from existing members</li>
+          <li>Lead form &amp; landing page split testing</li>
+          <li>Creative refresh every 14 days</li>
+        </ul>
+      </div>
+
+      <div class="strat-card" data-reveal data-delay="1">
+        <div class="head-row">
+          <span class="tag">Programme B</span>
+          <span class="priority">Campaign-bound · SAC compliant</span>
+        </div>
+        <h4>Petition &amp; Advocacy Amplification</h4>
+        <p>Reach-led Meta campaigns operated under Meta's Special Ad Category framework. Apolitical messaging, factual framing, designed to invite signature without inflaming. Compliance is non-negotiable.</p>
+        <ul class="levers">
+          <li>Special Ad Category compliant setup</li>
+          <li>Interest-based UK targeting only</li>
+          <li>Carousel and video formats</li>
+          <li>Signature conversion as the KPI</li>
+        </ul>
+      </div>
+
+      <div class="strat-card" data-reveal data-delay="2">
+        <div class="head-row">
+          <span class="tag">Programme C</span>
+          <span class="priority">Continuous · Highest revenue ROI</span>
+        </div>
+        <h4>Shopping Centre Revenue</h4>
+        <p>Member-only retargeting and reactivation. The most efficient revenue per pound spent because the audience is qualified by intent. Quarterly partner spotlight rotation keeps inventory fresh and brand exposure shared across partners.</p>
+        <ul class="levers">
+          <li>Logged-in member retargeting pools</li>
+          <li>Dynamic product ads for partner brands</li>
+          <li>Seasonal calendar tied to retail moments</li>
+          <li>Google Performance Max for branded coverage</li>
+        </ul>
+      </div>
+
+      <div class="strat-card" data-reveal data-delay="3">
+        <div class="head-row">
+          <span class="tag">Programme D</span>
+          <span class="priority">Slow-burn · High-value pipeline</span>
+        </div>
+        <h4>Partner School Pipeline</h4>
+        <p>Meta and LinkedIn targeting heads, bursars and marketing leads at UK independent schools. Designed as a slow-burn pipeline, not a volume play. One signed partner school is worth more than a hundred clicks.</p>
+        <ul class="levers">
+          <li>LinkedIn job-title targeting</li>
+          <li>Meta interest-based B2B targeting</li>
+          <li>Long-form content and case study assets</li>
+          <li>CRM-integrated follow-up sequence</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="strat-divider">Supporting operations</div>
+
+    <div class="ops-strip">
+      <div class="ops-card" data-reveal>
+        <div class="ops-glyph">E</div>
+        <div>
+          <div class="tag">Operating Programme</div>
+          <h4>Organic Social Cadence</h4>
+          <p>Twelve-month content programme across Facebook, Instagram, LinkedIn, X, TikTok and YouTube. Calibrated to the AFIS tone, measured, intelligent, community-led. No trend-jacking.</p>
+        </div>
+      </div>
+      <div class="ops-card" data-reveal data-delay="1">
+        <div class="ops-glyph">F</div>
+        <div>
+          <div class="tag">Operating Programme</div>
+          <h4>Measurement &amp; Insight Loop</h4>
+          <p>A single Looker Studio dashboard pulling Meta, Google, GA4 and CRM data. Weekly notes, monthly deep dive, quarterly strategy review. No black box, no jargon, full transparency.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FUNNEL -->
+<section class="funnel" id="funnel">
+  <div class="container">
+
+    <div class="label label-navy">04 · The Member Journey</div>
+    <h2>From quiet discovery to confident advocacy.</h2>
+
+    <div class="funnel-flow">
+      <div class="funnel-stage" data-reveal>
+        <div class="stage-num">01 · Awareness</div>
+        <h4>Discover AFIS</h4>
+        <p>UK parents and alumni see story-led video and carousel content introducing the AFIS mission. No hard sell, no fee panic, no political framing.</p>
+        <div class="signal">Signal: video view depth, profile visits, cause engagement</div>
+      </div>
+      <div class="funnel-stage" data-reveal data-delay="1">
+        <div class="stage-num">02 · Consideration</div>
+        <h4>Engage the Cause</h4>
+        <p>Petition reach, research reads, and member stories. Light-touch retargeting to engaged audiences only, no aggressive remarketing pressure.</p>
+        <div class="signal">Signal: petition signature, content time-on-page, return visits</div>
+      </div>
+      <div class="funnel-stage" data-reveal data-delay="2">
+        <div class="stage-num">03 · Conversion</div>
+        <h4>Join AFIS</h4>
+        <p>Free membership sign-up via lead form or on-site registration. CRM tags acquisition source for downstream attribution and LTV tracking.</p>
+        <div class="signal">Signal: completed registration, source attribution, segment tag</div>
+      </div>
+      <div class="funnel-stage" data-reveal data-delay="3">
+        <div class="stage-num">04 · Activation</div>
+        <h4>Shop &amp; Advocate</h4>
+        <p>New members introduced to the Shopping Centre, encouraged to share the petition, and invited into deeper community engagement.</p>
+        <div class="signal">Signal: first purchase, referrals, organic share</div>
+      </div>
+    </div>
+
+    <div class="funnel-notes">
+      <div class="funnel-note" data-reveal>
+        <h5>Attribution Model</h5>
+        <p>Data-driven on Google, view-through on Meta, Conversion API for event reliability. CRM tagging closes the loop on lifetime value per acquisition source.</p>
+      </div>
+      <div class="funnel-note" data-reveal data-delay="1">
+        <h5>Creative Discipline</h5>
+        <p>Every asset reviewed against the AFIS apolitical brand position. Refresh cadence prevents fatigue without diluting tone. Approval workflow runs through your team.</p>
+      </div>
+      <div class="funnel-note" data-reveal data-delay="2">
+        <h5>Budget Allocation</h5>
+        <p>Starts 60% acquisition, 25% Shopping Centre, 15% advocacy and partner schools. Rebalanced monthly based on actual performance, never assumption.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- COMPLIANCE -->
+<section class="compliance" id="compliance">
+  <div class="container">
+
+    <div class="label">05 · Compliance &amp; Brand Safeguarding</div>
+    <h2>The technical realities <span class="accent">most agencies skip past.</span></h2>
+    <p class="lead">
+      AFIS sits at the intersection of education, family, and public debate. That brings platform considerations
+      a generic ecommerce media buyer would not know to flag.
+    </p>
+
+    <div class="comp-grid">
+      <div class="comp-block" data-reveal>
+        <div class="tag">01 · Platform</div>
+        <h4>Meta Special Ad Category</h4>
+        <p>
+          Petition and advocacy content for AFIS is likely to fall under Meta's Social Issues, Elections or Politics category.
+          That removes detailed targeting options, requires a verified Page admin, and limits ad copy claims.
+        </p>
+        <p>
+          I run Special Ad Category campaigns under live compliance review. This shapes everything from audience build to creative language and disclaimer placement. It is not optional, and getting it wrong risks the ad account.
+        </p>
+      </div>
+
+      <div class="comp-block" data-reveal data-delay="1">
+        <div class="tag">02 · Brand</div>
+        <h4>Apolitical Tone Discipline</h4>
+        <p>
+          AFIS is explicit about being apolitical and not aligned with any party. Every piece of paid creative is written
+          to that constraint, with a review checkpoint before any spend goes live. No campaign launches without
+          your sign-off.
+        </p>
+        <p>
+          The same discipline applies to organic. Reactive content on policy news is drafted to inform, never to take a partisan position. This protects the brand long-term.
+        </p>
+      </div>
+
+      <div class="comp-block" data-reveal data-delay="2">
+        <div class="tag">03 · Technical</div>
+        <h4>Tracking, Privacy &amp; Consent</h4>
+        <p>
+          GDPR, GTM consent mode, cookie policy alignment, and server-side event reliability via Conversion API.
+          Audited at week one, fixed at week two, monitored continuously thereafter.
+        </p>
+        <p>
+          A clean measurement foundation is the difference between scaling on signal and scaling on noise.
+          For a not-for-profit, every pound of wasted spend is a member benefit lost.
+        </p>
+      </div>
+
+      <div class="comp-block" data-reveal data-delay="3">
+        <div class="tag">04 · Safeguarding</div>
+        <h4>Children, Imagery &amp; Consent</h4>
+        <p>
+          Any imagery featuring children requires written consent, clear safeguarding policy, and ideally
+          stock-licensed or member-submitted assets with documented permissions.
+        </p>
+        <p>
+          I work to UK independent sector safeguarding standards on creative selection and will not use any image
+          that cannot be evidenced and defended on request.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="roadmap" id="roadmap">
+  <div class="container">
+
+    <div class="label label-navy">06 · The Twelve-Month Roadmap</div>
+    <h2>What gets done, in what order, and why.</h2>
+
+    <div class="timeline">
+      <div class="phase" data-reveal>
+        <div class="phase-label">Month 01 · Foundation</div>
+        <h4>Audit, fix, launch</h4>
+        <ul>
+          <li>Meta and Google account audit</li>
+          <li>GA4, GTM and Conversion API health check</li>
+          <li>Looker Studio dashboard build</li>
+          <li>Member Acquisition Engine launched</li>
+          <li>Brand tone workshop with AFIS team</li>
+        </ul>
+      </div>
+      <div class="phase" data-reveal data-delay="1">
+        <div class="phase-label">Months 02–04 · Build</div>
+        <h4>Test, learn, scale</h4>
+        <ul>
+          <li>Shopping Centre retargeting live</li>
+          <li>Petition campaign under SAC framework</li>
+          <li>Creative testing matrix in market</li>
+          <li>Partner school pipeline activated</li>
+          <li>Organic cadence fully operational</li>
+        </ul>
+      </div>
+      <div class="phase" data-reveal data-delay="2">
+        <div class="phase-label">Months 05–08 · Scale</div>
+        <h4>Pour fuel on what works</h4>
+        <ul>
+          <li>Budget rebalanced to proven programmes</li>
+          <li>YouTube and Demand Gen added on Google</li>
+          <li>Member story video programme</li>
+          <li>Quarterly strategic review with team</li>
+          <li>Seasonal Shopping Centre push</li>
+        </ul>
+      </div>
+      <div class="phase" data-reveal data-delay="3">
+        <div class="phase-label">Months 09–12 · Compound</div>
+        <h4>Lock in the learning</h4>
+        <ul>
+          <li>Annual strategy refresh on actual data</li>
+          <li>Documented playbook for AFIS team</li>
+          <li>LTV reporting per acquisition source</li>
+          <li>Year Two proposal informed by evidence</li>
+          <li>Knowledge transfer for in-house capability</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- KPIs -->
+<section class="kpis" id="kpis">
+  <div class="container">
+
+    <div class="label label-navy">07 · How Success Is Measured</div>
+    <h2>Targets you can hold me to.</h2>
+    <p class="intro">
+      Indicative metric framework for the first twelve months. Specific baselines and targets agreed after discovery and account access, honest targets require seeing the data first.
+    </p>
+
+    <div class="kpi-table">
+      <div class="kpi-row head">
+        <div>Metric</div>
+        <div>Baseline</div>
+        <div>12-Month Target</div>
+        <div>Why it matters</div>
+      </div>
+
+      <div class="kpi-row" data-reveal>
+        <div class="kpi-metric">New free members acquired</div>
+        <div class="kpi-baseline">TBC at discovery</div>
+        <div class="kpi-target">Growth trajectory agreed</div>
+        <div class="kpi-note">The foundation metric. Every other KPI compounds from this.</div>
+      </div>
+
+      <div class="kpi-row" data-reveal>
+        <div class="kpi-metric">Cost per acquired member</div>
+        <div class="kpi-baseline">TBC at discovery</div>
+        <div class="kpi-target">Continuous reduction</div>
+        <div class="kpi-note">Efficiency over volume. Lower CPA means more of the donation pound goes to the cause.</div>
+      </div>
+
+      <div class="kpi-row" data-reveal>
+        <div class="kpi-metric">Petition signature growth</div>
+        <div class="kpi-baseline">TBC at discovery</div>
+        <div class="kpi-target">Measured uplift from paid</div>
+        <div class="kpi-note">Advocacy reach without compromising the apolitical stance.</div>
+      </div>
+
+      <div class="kpi-row" data-reveal>
+        <div class="kpi-metric">Shopping Centre attributable revenue</div>
+        <div class="kpi-baseline">TBC at discovery</div>
+        <div class="kpi-target">Programme-positive ROAS</div>
+        <div class="kpi-note">Revenue funds the mission. Direct line from campaign to cause.</div>
+      </div>
+
+      <div class="kpi-row" data-reveal>
+        <div class="kpi-metric">Partner school enquiries</div>
+        <div class="kpi-baseline">TBC at discovery</div>
+        <div class="kpi-target">Quarterly pipeline build</div>
+        <div class="kpi-note">Slow-burn, high-value. One signed school changes the network.</div>
+      </div>
+
+      <div class="kpi-row" data-reveal>
+        <div class="kpi-metric">Organic engagement &amp; follower growth</div>
+        <div class="kpi-baseline">TBC at discovery</div>
+        <div class="kpi-target">Compounding monthly</div>
+        <div class="kpi-note">Owned audience that does not depend on paid budget to reach.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- INVESTMENT -->
+<section class="investment" id="investment">
+  <div class="container">
+
+    <div class="label">08 · Investment</div>
+    <h2>What it costs.<br/><span class="accent">What you get.</span></h2>
+    <p class="lead">
+      Indicative scope and engagement structure. Final figures and term length agreed after discovery,
+      and shaped around what AFIS realistically has to work with.
+    </p>
+
+    <div class="inv-grid">
+
+      <div class="inv-includes">
+        <h4>Included in retainer</h4>
+        <ul>
+          <li>End-to-end Meta Ads management across all programmes</li>
+          <li>End-to-end Google Ads management including Search, PMax and YouTube</li>
+          <li>Special Ad Category compliance setup and ongoing review</li>
+          <li>Organic social planning and publishing across six channels</li>
+          <li>GA4, GTM and Conversion API setup and maintenance</li>
+          <li>Bespoke Looker Studio dashboard built for AFIS</li>
+          <li>Weekly performance notes, monthly deep dive, quarterly strategy review</li>
+          <li>Direct access for ad-hoc questions during UK working hours</li>
+          <li>Creative copywriting and brief development for in-house design</li>
+          <li>Annual playbook handover at month twelve</li>
+        </ul>
+      </div>
+
+      <div class="inv-box" data-reveal>
+        <div class="ib-label">Engagement Structure</div>
+        <div class="ib-tier">Monthly Retainer</div>
+        <div class="ib-detail">A single transparent fee covering all paid media management and organic social work. Ad spend paid by AFIS directly to platforms, no platform mark-ups, no opaque commissions.</div>
+
+        <div class="ib-rule"></div>
+
+        <div class="ib-label">Term &amp; Flexibility</div>
+        <div class="ib-tier">Agreed at Discovery</div>
+        <div class="ib-detail">Term length and notice structured to work for a not-for-profit, with appropriate protection on both sides to allow strategies to mature without locking AFIS in.</div>
+
+        <div class="ib-rule"></div>
+
+        <div class="ib-foot">
+          Final fee &amp; spend recommendations<br/>
+          agreed in writing after discovery call.<br/>
+          No hidden charges. No platform mark-ups.<br/>
+          No spend commitment required upfront.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CLOSE -->
+<section class="close" id="close">
+  <div class="container">
+
+    <div class="label">09 · The Close</div>
+    <h2>A voice worth <span class="accent">amplifying.</span></h2>
+    <p class="pitch">
+      AFIS has built something that matters. Families who choose independent education deserve a clearer voice in public debate, fairer treatment in policy, and a community that has their back. <em>My job is to put that voice in front of the right people, at the right moment, in a way that honours the brand you have created.</em>
+    </p>
+
+    <div class="signoff">
+      <div class="signoff-block">
+        <h5>Next Step</h5>
+        <p>A short follow-up call to walk through scope, agree on first-month priorities, and confirm spend levels.</p>
+      </div>
+      <div class="signoff-block">
+        <h5>Prepared By</h5>
+        <p>Charles Piper</p>
+        <p class="sml">Senior Performance Marketing · Meta Certified Media Buying Professional · Top Rated on Upwork</p>
+      </div>
+      <div class="signoff-block">
+        <h5>Heath Media Ltd</h5>
+        <p class="contact">All communications via Upwork<br/>through to contract signature</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  // Progress bar
+  const progress = document.getElementById('progress');
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const h = document.documentElement;
+        const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+        progress.style.width = pct + '%';
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  // Nav dots
+  const sections = document.querySelectorAll('section');
+  const dots = document.querySelectorAll('.nav-dot');
+
+  dots.forEach((dot) => {
+    dot.addEventListener('click', () => {
+      const target = document.getElementById(dot.dataset.target);
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        dots.forEach((d) => d.classList.remove('active'));
+        const active = document.querySelector(`.nav-dot[data-target="${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.4 });
+
+  sections.forEach((s) => sectionObserver.observe(s));
+
+  // Reveal on scroll
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('[data-reveal]').forEach((el) => revealObserver.observe(el));
+</script>
+
+</body>
+</html>
